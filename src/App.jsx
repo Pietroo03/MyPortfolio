@@ -9,9 +9,10 @@ function App() {
   return (
     <>
 
-      <main className="text-gray-400 bg-gray-900 body-font">
+      <Header />
 
-        <Header />
+      <main className="text-gray-400 bg-gray-800 body-font h-screen">
+
         <About />
         <Skills />
         <Projects />
