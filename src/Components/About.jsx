@@ -20,13 +20,15 @@ export default function About() {
                         <span className='pl-4'>What will you find here?</span>
                     </div>
                     <ul>
-                        <li className='pb-13'>
-                            <FontAwesomeIcon icon={faDiamond} className='text-blue-500' />
-                            <div className='inline pl-4 '>
-                                <span className='font-bold text-indigo-400'>
-                                    <a href="#projects">My Projects: </a>
+                        <li className='pb-13 flex'>
+                            <div>
+                                <FontAwesomeIcon icon={faDiamond} className='text-blue-500' />
+                            </div>
+                            <div className='pl-4'>
+                                <span className='font-bold text-indigo-400 inline-block group transition-transform duration-500 ease-in-out hover:scale-105 transition duration-200 ease-in-out'>
+                                    <a href="#projects" className="bg-left-bottom bg-gradient-to-r from-indigo-400 to-indigo-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out ">My Projects:</a>
                                 </span>
-                                <span>a selection of my work developed during the <strong className='text-cyan-500'>Boolean</strong> course</span>
+                                <span className='pl-4'>a selection of my work developed during the <strong className='text-cyan-500'>Boolean</strong> course</span>
                             </div>
                         </li>
                         <li className='pb-13 flex'>
@@ -34,10 +36,10 @@ export default function About() {
                                 <FontAwesomeIcon icon={faDiamond} className='text-blue-500' />
                             </div>
                             <div className='pl-4'>
-                                <span className='font-bold text-indigo-400'>
-                                    <a href="#skills">My Skills: </a>
+                                <span className='font-bold text-indigo-400 inline-block group transition-transform duration-200 ease-in-out hover:scale-105 transition duration-500 ease-in-out'>
+                                    <a href="#skills" className="bg-left-bottom bg-gradient-to-r from-indigo-400 to-indigo-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out ">My Skills:</a>
                                 </span>
-                                <span>an overview of the technologies and tools I learnt and I use to develop modern and efficient web applications.</span>
+                                <span className='pl-4'>an overview of the technologies and tools I learnt and I use to develop modern and efficient web applications.</span>
                             </div>
 
                         </li>
@@ -46,18 +48,13 @@ export default function About() {
                                 <FontAwesomeIcon icon={faDiamond} className='text-blue-500' />
                             </div>
                             <div className='pl-4'>
-                                <span className='font-bold text-indigo-400'>
-                                    <a href="#contacts">My Contacts: </a>
+                                <span className='font-bold text-indigo-400 inline-block group transition-transform duration-200 ease-in-out hover:scale-105 transition duration-500 ease-in-out'>
+                                    <a href="#contacts" className="bg-left-bottom bg-gradient-to-r from-indigo-400 to-indigo-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out ">My Contacts:</a>
                                 </span>
-                                <span>you can visit my GitHub, connect with me on LinkedIn, watch my CV and you can also contact me through email.</span>
+                                <span className='pl-4'>you can visit my GitHub, connect with me on LinkedIn, watch my CV and you can also contact me through email.</span>
                             </div>
                         </li>
                     </ul>
-                </div>
-                <div className='text-center text-3xl pt-8 '>
-                    <button className='rounded-full bg-indigo-800 hover:scale-125 transition duration-200 ease-in-out' style={{ width: '40px', height: '40px' }}>
-                        <a href="#skills">↓</a>
-                    </button>
                 </div>
             </section >
 
