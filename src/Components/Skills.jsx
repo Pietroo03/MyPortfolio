@@ -1,6 +1,6 @@
 export default function Skills() {
 
     return (
-        <div>Skills</div>
+        <div className="h-screen">Skills</div>
     )
 }

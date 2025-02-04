@@ -1,7 +1,7 @@
 export default function Projects() {
 
     return (
-        <div>Projects</div>
+        <div className="h-screen">Projects</div>
 
     )
 }

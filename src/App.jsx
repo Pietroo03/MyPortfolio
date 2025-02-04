@@ -11,7 +11,7 @@ function App() {
 
       <Header />
 
-      <main className="text-gray-400 bg-gray-800 body-font h-screen">
+      <main className="text-white bg-gray-800 ">
 
         <About />
         <Skills />
