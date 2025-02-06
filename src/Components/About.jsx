@@ -13,9 +13,8 @@ export default function About() {
                     {/* Contenuto (Saluto + Paragrafo insieme da md in poi) */}
                     <div className="w-full md:w-2/3 order-2 md:order-1 flex flex-col">
                         {/* Saluto */}
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl flex items-center justify-start">
-                            <img src="/mano-che-saluta.gif" alt="" style={{ width: '72px' }} className="inline" />
-                            <span className="pl-4">Hi, I'm Pietro</span>
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl flex items-center justify-start">
+                            <div>Hi, I'm Pietro</div>
                         </h1>
 
                         {/* Paragrafo */}

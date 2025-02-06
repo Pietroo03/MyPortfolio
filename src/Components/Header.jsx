@@ -10,10 +10,10 @@ export default function Header() {
 
     return (
         <>
-            <header className="flex justify-between items-center py-7 px-2 md:px-8 text-2xl bg-slate-600/90 text-white sticky top-0 right-0 left-0">
+            <header className="flex justify-between items-center py-7 px-2 md:px-8 text-2xl bg-slate-600/90 text-white sticky top-0 right-0 left-0 z-10">
                 <div className="flex items-center text-3xl md:text-4xl">
                     <img
-                        src="public/IMG_20250123_172511.jpg"
+                        src="public/profile-photo.jpg"
                         alt=""
                         style={{ width: "70px", borderRadius: "50%" }}
                     />
@@ -84,9 +84,7 @@ export default function Header() {
             </header>
 
             {/* Menu mobile */}
-            <div
-                className={`${menuOpen ? "sticky top-[123px] bg-slate-600/90 text-white py-5 px-4 z-50" : "hidden"}`}
-            >
+            <div className={`${menuOpen ? "sticky top-[123px] bg-slate-600/90 text-white py-5 px-4 z-50" : "hidden"}`}>
                 <div className="text-xl py-3">
                     <Link
                         to="about"
@@ -94,8 +92,7 @@ export default function Header() {
                         duration={1200}
                         offset={-371}
                         onClick={toggleMenu}
-                        className="cursor-pointer hover:text-blue-400 transition duration-200 ease-in-out"
-                    >
+                        className="cursor-pointer hover:text-blue-400 transition duration-200 ease-in-out">
                         About
                     </Link>
                 </div>
@@ -105,8 +102,7 @@ export default function Header() {
                         smooth={true}
                         duration={1200}
                         onClick={toggleMenu}
-                        className="cursor-pointer hover:text-blue-400 transition duration-200 ease-in-out"
-                    >
+                        className="cursor-pointer hover:text-blue-400 transition duration-200 ease-in-out">
                         Projects
                     </Link>
                 </div>
@@ -116,8 +112,7 @@ export default function Header() {
                         smooth={true}
                         duration={1200}
                         onClick={toggleMenu}
-                        className="cursor-pointer hover:text-blue-400 transition duration-200 ease-in-out"
-                    >
+                        className="cursor-pointer hover:text-blue-400 transition duration-200 ease-in-out">
                         Skills
                     </Link>
                 </div>
@@ -127,8 +122,7 @@ export default function Header() {
                         smooth={true}
                         duration={1200}
                         onClick={toggleMenu}
-                        className="cursor-pointer hover:text-blue-400 transition duration-200 ease-in-out"
-                    >
+                        className="cursor-pointer hover:text-blue-400 transition duration-200 ease-in-out">
                         Contacts
                     </Link>
                 </div>

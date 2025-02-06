@@ -14,8 +14,8 @@ function App() {
       <main className="text-white bg-gray-800 ">
 
         <About />
-        <Skills />
         <Projects />
+        <Skills />
 
       </main>
 
