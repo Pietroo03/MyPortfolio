@@ -1,10 +1,24 @@
 import { Link } from "react-scroll";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [offset, setOffset] = useState(-125); // Valore di default
+
+    useEffect(() => {
+        const updateOffset = () => {
+            if (window.innerWidth < 640) { // sm
+                setOffset(-280);
+            }
+        };
+
+        updateOffset(); // Imposta il valore iniziale
+        window.addEventListener('resize', updateOffset); // Aggiorna al resize
+
+        return () => window.removeEventListener('resize', updateOffset);
+    }, []);
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -48,6 +62,8 @@ export default function Header() {
                             to="projects"
                             smooth={true}
                             duration={1200}
+                            offset={100}
+
                             className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
                         >
                             Projects
@@ -101,6 +117,7 @@ export default function Header() {
                         to="projects"
                         smooth={true}
                         duration={1200}
+                        offset={offset}
                         onClick={toggleMenu}
                         className="cursor-pointer hover:text-blue-400 transition duration-200 ease-in-out">
                         Projects

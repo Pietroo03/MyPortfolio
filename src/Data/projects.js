@@ -27,8 +27,21 @@ const projects = [
     },
     {
         title: 'Boolfix',
-        description: 'Una Web App per visualizzare dettagli di film e serie TV. La Web App permette di ricercare un film o una serie Tv tramite una barra di ricerca.',
-        image: '',
+        description: 'A Web App to view details of movies and TV series. The Web App allows users to search for a movie or TV series using a search bar.',
+        functions: [
+            'Search for all movies or TV series using an external API;',
+            'View details by hovering over the movie or TV series;',
+            'Display the original title;',
+            'See the movie or TV series rating from 0 to 5 stars;',
+            'View the original language of the movie or TV series;'
+        ],
+        image: [
+            'public/Boolfix-img/Homepage.png',
+            'public/Boolfix-img/Films.png',
+            'public/Boolfix-img/HoverEffectFilm.png',
+            'public/Boolfix-img/TVSeries.png',
+        ],
+        video: 'public/Boolfix-img/Video Boolfix.mp4'
     }
 ]
 
