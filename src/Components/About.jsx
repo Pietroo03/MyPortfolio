@@ -22,7 +22,7 @@ export default function About() {
 
     return (
         <>
-            <section id="about" className="md:pt-50 lg:pt-30 px-2 md:px-8 lg:px-20  ">
+            <section id="about" className="md:pt-50 lg:pt-30 px-2 md:px-8 lg:px-20 bg-gray-900">
                 <div className="container mx-auto">
                     <div className="row flex flex-col md:flex-row items-center justify-between">
                         {/* Contenuto (Saluto + Paragrafo insieme da md in poi) */}
@@ -88,6 +88,18 @@ export default function About() {
                     </ul>
                 </div>
             </section>
+            <div className='text-gray-900 rotate-180 w-full'>
+                <svg className="w-full h-[60px] md:h-[110px] lg:h-[150px] 3xl:h-[400px] aspect-[1440/100]"
+                    viewBox="0 0 1440 100"
+                    preserveAspectRatio="xMidYMid slice"
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                >
+                    <path className="wavePath-haxJK1 animationPaused-2hZ4IO "
+                        d="M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z"
+                        fill="currentColor" />
+                </svg>
+            </div>
         </>
     )
 }

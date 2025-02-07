@@ -13,7 +13,7 @@ export default function Projects() {
     const swiperRef = useRef([]);
 
     return (
-        <section id="projects" className="pt-30 md:pt-65 px-2 md:px-8 lg:px-20">
+        <section id="projects" className="pt-30 md:pt-65 px-2 md:px-8 lg:px-20 bg-gray-800">
             <div className="container mx-auto">
                 <div className="text-3xl md:text-4xl lg:text-5xl text-center">
                     Here you can see my projects developed during the Boolean course
