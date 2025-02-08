@@ -7,7 +7,7 @@ export default function Footer() {
     return (
         <>
 
-            <footer id="contacts" className="py-7 px-2 md:px-4 text-xl bg-gray-900 text-white">
+            <footer id="contacts" className="py-7 px-2 md:px-4 text-xl bg-slate-600 text-white">
                 <div className="flex flex-col md:items-center">
                     <a href="https://github.com/Pietroo03" className='my-2 group hover:text-cyan-500 transition duration-200 ease-in-out'>
                         <FontAwesomeIcon icon={faGithub} />

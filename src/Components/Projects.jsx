@@ -35,6 +35,13 @@ export default function Projects() {
                                 className="text-3xl md:text-5xl lg:text-5xl pt-8 md:pt-15 text-left text-sky-600 font-bold">
                                 {project.title}
                             </motion.div>
+                            <motion.div
+                                initial={{ opacity: 0, y: 50 }}
+                                animate={controls}
+                                transition={{ duration: 0.5, delay: 0.4, }}
+                                className="text-xl md:text-2xl lg:text-3xl pt-8 md:pt-15 text-left">
+                                {project.description}
+                            </motion.div>
 
                             {/* Carosello */}
                             <motion.div
