@@ -2,31 +2,41 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faDiamond } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-scroll'
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import UseScrollAnimation from '../Animation/ScrollAnimation';
 
 export default function About() {
 
-    const [offset, setOffset] = useState(100);; // Valore di default
+    const { controls, isVisible } = UseScrollAnimation('about')
+    const [offset, setOffset] = useState(100);
 
     useEffect(() => {
         const updateOffset = () => {
             if (window.innerWidth < 640) { // sm
-                setOffset(0);
-            }
-        };
+                setOffset(-85);
+            } else if (window.innerWidth <= 1024) { // md
+                setOffset(-50);
+            };
+        }
 
-        updateOffset(); // Imposta il valore iniziale
-        window.addEventListener('resize', updateOffset); // Aggiorna al resize
+        updateOffset();
+        window.addEventListener('resize', updateOffset);
 
         return () => window.removeEventListener('resize', updateOffset);
     }, []);
 
     return (
         <>
-            <section id="about" className="md:pt-50 lg:pt-30 px-2 md:px-8 lg:px-20 bg-gray-900">
+            <section id="about" className="md:pt-20 lg:pt-30 px-2 md:px-8 lg:px-10 bg-gray-900">
                 <div className="container mx-auto">
                     <div className="row flex flex-col md:flex-row items-center justify-between">
                         {/* Contenuto (Saluto + Paragrafo insieme da md in poi) */}
-                        <div className="w-full md:w-2/3 order-2 md:order-1 flex flex-col">
+                        <motion.div
+                            initial={{ opacity: 0, y: 50, }}
+                            animate={controls}
+                            transition={{ duration: 0.5, delay: 0.3, }}
+                            className="w-full md:w-2/3 order-2 md:order-1 flex flex-col"
+                        >
                             {/* Saluto */}
                             <h1 className="text-3xl pb-5 md:text-4xl lg:text-5xl flex items-center justify-start">
                                 <div>Hi, I'm Pietro</div>
@@ -40,18 +50,31 @@ export default function About() {
                                     share with you my projects and my skills.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* Immagine (prima su mobile, a destra da md in poi) */}
-                        <div className="w-full md:w-1/3 order-1 md:order-2 flex justify-center">
+                        <motion.div
+                            initial={{ opacity: 0, y: 50, }}
+                            animate={controls}
+                            transition={{ duration: 0.5, delay: 0.4, }}
+                            className="w-full md:w-1/3 order-1 md:order-2 flex justify-center">
                             <img src="public/avatar3.png" alt="" className="w-3/4 md:w-full" />
-                        </div>
+                        </motion.div>
                     </div>
-                    <div className='text-3xl md:text-4xl py-10'>
+                    <motion.div
+                        initial={{ opacity: 0, y: 50, }}
+                        animate={controls}
+                        transition={{ duration: 0.5, delay: 0.5, }}
+                        className='text-2xl sm:text-3xl md:text-4xl pb-8 pt-20 md:pb-15'>
+
                         <FontAwesomeIcon icon={faMagnifyingGlass} rotation={90} className='text-cyan-500' />
                         <span className='pl-4'>What will you find here?</span>
-                    </div>
-                    <ul className='text-xl md:text-3xl'>
+                    </motion.div>
+                    <motion.ul
+                        initial={{ opacity: 0, y: 50, }}
+                        animate={controls}
+                        transition={{ duration: 0.5, delay: 0.5, }}
+                        className='text-xl md:text-3xl'>
                         <li className='pb-10 md:pb-13 flex items-center'>
                             <div>
                                 <FontAwesomeIcon icon={faDiamond} className='text-blue-500' />
@@ -85,11 +108,11 @@ export default function About() {
                                 <span className='pl-4'>you can visit my GitHub, connect with me on LinkedIn, watch my CV and you can also contact me through email.</span>
                             </div>
                         </li>
-                    </ul>
+                    </motion.ul>
                 </div>
-            </section>
+            </section >
             <div className='text-gray-900 rotate-180 w-full'>
-                <svg className="w-full h-[60px] md:h-[110px] lg:h-[150px] 3xl:h-[400px] aspect-[1440/100]"
+                <svg className="w-full h-[55px] md:h-[110px] lg:h-[150px] 3xl:h-[400px]"
                     viewBox="0 0 1440 100"
                     preserveAspectRatio="xMidYMid slice"
                     xmlns="http://www.w3.org/2000/svg"

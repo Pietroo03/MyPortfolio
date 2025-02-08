@@ -10,7 +10,7 @@ export default function Header() {
     useEffect(() => {
         const updateOffset = () => {
             if (window.innerWidth < 640) { // sm
-                setOffset(-280);
+                setOffset(-335);
             }
         };
 
@@ -24,12 +24,13 @@ export default function Header() {
 
     return (
         <>
-            <header className="flex justify-between items-center py-7 px-2 md:px-8 text-2xl bg-slate-600/90 text-white sticky top-0 right-0 left-0 z-10">
+            <header className="flex justify-between items-center py-2 md:py-7 px-2 md:px-8 text-2xl bg-slate-600/90 text-white sticky top-0 right-0 left-0 z-10">
                 <div className="flex items-center text-3xl md:text-4xl">
                     <img
                         src="public/profile-photo.jpg"
                         alt=""
-                        style={{ width: "70px", borderRadius: "50%" }}
+                        style={{ borderRadius: "50%" }}
+                        className="w-[70px]"
                     />
                     <span className="pl-5 group hover:text-blue-400 transition duration-200 ease-in-out hover:scale-110 transition duration-500 ease-in-out">
                         <Link
@@ -62,7 +63,7 @@ export default function Header() {
                             to="projects"
                             smooth={true}
                             duration={1200}
-                            offset={100}
+                            offset={-50}
 
                             className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
                         >
@@ -100,7 +101,7 @@ export default function Header() {
             </header>
 
             {/* Menu mobile */}
-            <div className={`${menuOpen ? "sticky top-[123px] bg-slate-600/90 text-white py-5 px-4 z-50" : "hidden"}`}>
+            <div className={`${menuOpen ? "sticky top-[83px] bg-slate-600/90 text-white py-5 px-4 z-50" : "hidden"}`}>
                 <div className="text-xl py-3">
                     <Link
                         to="about"
