@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+/* Stile per la scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Sfondo della scrollbar */
+::-webkit-scrollbar-track {
+    background: theme(colors.slate.600);
+}
+
+/* Barra scorrevole */
+::-webkit-scrollbar-thumb {
+    background: theme(colors.cyan.700)
+}

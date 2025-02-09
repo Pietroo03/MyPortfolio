@@ -36,7 +36,7 @@ export default function Header() {
                         <Link
                             to="about"
                             smooth={true}
-                            duration={1200}
+                            duration={2500}
                             offset={-125}
                             className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]"
                         >
@@ -51,7 +51,7 @@ export default function Header() {
                         <Link
                             to="about"
                             smooth={true}
-                            duration={1200}
+                            duration={2500}
                             offset={-125}
                             className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
                         >
@@ -62,7 +62,7 @@ export default function Header() {
                         <Link
                             to="projects"
                             smooth={true}
-                            duration={1200}
+                            duration={2500}
                             offset={-50}
 
                             className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
@@ -74,7 +74,7 @@ export default function Header() {
                         <Link
                             to="skills"
                             smooth={true}
-                            duration={1200}
+                            duration={2500}
                             className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
                         >
                             Skills
@@ -84,7 +84,7 @@ export default function Header() {
                         <Link
                             to="contacts"
                             smooth={true}
-                            duration={1200}
+                            duration={2500}
                             className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
                         >
                             Contacts
@@ -106,7 +106,7 @@ export default function Header() {
                     <Link
                         to="about"
                         smooth={true}
-                        duration={1200}
+                        duration={2500}
                         offset={-371}
                         onClick={toggleMenu}
                         className="cursor-pointer hover:text-blue-400 transition duration-200 ease-in-out">
@@ -117,7 +117,7 @@ export default function Header() {
                     <Link
                         to="projects"
                         smooth={true}
-                        duration={1200}
+                        duration={2500}
                         offset={offset}
                         onClick={toggleMenu}
                         className="cursor-pointer hover:text-blue-400 transition duration-200 ease-in-out">
@@ -128,7 +128,8 @@ export default function Header() {
                     <Link
                         to="skills"
                         smooth={true}
-                        duration={1200}
+                        duration={2500}
+                        offset={-300}
                         onClick={toggleMenu}
                         className="cursor-pointer hover:text-blue-400 transition duration-200 ease-in-out">
                         Skills
@@ -138,7 +139,7 @@ export default function Header() {
                     <Link
                         to="contacts"
                         smooth={true}
-                        duration={1200}
+                        duration={2500}
                         onClick={toggleMenu}
                         className="cursor-pointer hover:text-blue-400 transition duration-200 ease-in-out">
                         Contacts

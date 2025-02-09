@@ -16,12 +16,12 @@ export default function Projects() {
 
     return (
         <>
-            <section id="projects" className="md:pt-20 lg:pt-30 md:pt-65 px-2 md:px-8 lg:px-10 bg-gray-800">
+            <section id="projects" className="pt-10 md:py-40 lg:pt-30 md:pt-65 px-2 md:px-8 lg:px-10 bg-gray-800">
                 <div className="container mx-auto">
                     <motion.div
-                        initial={{ opacity: 0, y: 50, }}
-                        animate={controls}
-                        transition={{ duration: 0.5, delay: 0.3, }}
+                        initial={{ opacity: 0, x: 200 }} // L'intero blocco parte più in basso
+                        animate={{ opacity: 1, x: 0 }} // Sale verso l'alto
+                        transition={{ duration: 1, ease: "easeOut" }}
                         className="text-3xl md:text-4xl lg:text-5xl text-center pb-10">
                         Here you can see my projects developed during the Boolean course
                     </motion.div>
@@ -29,25 +29,25 @@ export default function Projects() {
                         <div key={index} className="mb-20">
                             {/* Titolo a sinistra */}
                             <motion.div
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={controls}
-                                transition={{ duration: 0.5, delay: 0.4, }}
+                                initial={{ opacity: 0, x: 200 }} // L'intero blocco parte più in basso
+                                animate={{ opacity: 1, x: 0 }} // Sale verso l'alto
+                                transition={{ duration: 1.2, ease: "easeOut" }}
                                 className="text-3xl md:text-5xl lg:text-5xl pt-8 md:pt-15 text-left text-sky-600 font-bold">
                                 {project.title}
                             </motion.div>
                             <motion.div
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={controls}
-                                transition={{ duration: 0.5, delay: 0.4, }}
+                                initial={{ opacity: 0, x: 200 }} // L'intero blocco parte più in basso
+                                animate={{ opacity: 1, x: 0 }} // Sale verso l'alto
+                                transition={{ duration: 1.2, ease: "easeOut" }}
                                 className="text-xl md:text-2xl lg:text-3xl pt-8 md:pt-15 text-left">
                                 {project.description}
                             </motion.div>
 
                             {/* Carosello */}
                             <motion.div
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={controls}
-                                transition={{ duration: 0.5, delay: 0.4, }}
+                                initial={{ opacity: 0, x: 200 }} // L'intero blocco parte più in basso
+                                animate={{ opacity: 1, x: 0 }} // Sale verso l'alto
+                                transition={{ duration: 1.3, ease: "easeOut" }}
                                 className="pt-8 lg:p-15 mx-auto h-auto w-full flex justify-center items-center relative">
                                 {/* Swiper Carousel */}
                                 <Swiper
@@ -73,17 +73,17 @@ export default function Projects() {
 
                                 {/* Bottoni dentro il carosello */}
                                 <motion.div
-                                    initial={{ opacity: 0, y: 50 }}
-                                    animate={controls}
-                                    transition={{ duration: 0.5, delay: 0.4, }}
+                                    initial={{ opacity: 0, x: 200 }} // L'intero blocco parte più in basso
+                                    animate={{ opacity: 1, x: 0 }} // Sale verso l'alto
+                                    transition={{ duration: 1.3, ease: "easeOut" }}
                                     className={`hidden md:block swiper-button-prev-${index} absolute top-1/2 left-1/15 transform -translate-y-1/2 text-white bg-black bg-opacity-50 px-4 py-2 rounded-full cursor-pointer z-3`}
                                 >
                                     <FontAwesomeIcon icon={faChevronLeft} />
                                 </motion.div>
                                 <motion.div
-                                    initial={{ opacity: 0, y: 50 }}
-                                    animate={controls}
-                                    transition={{ duration: 0.5, delay: 0.4, }}
+                                    initial={{ opacity: 0, x: 200 }} // L'intero blocco parte più in basso
+                                    animate={{ opacity: 1, x: 0 }} // Sale verso l'alto
+                                    transition={{ duration: 1.3, ease: "easeOut" }}
                                     className={`hidden md:block swiper-button-next-${index} absolute top-1/2 right-1/15 transform -translate-y-1/2 text-white bg-black bg-opacity-50 px-4 py-2 rounded-full cursor-pointer z-3`}
                                 >
                                     <FontAwesomeIcon icon={faChevronRight} />
@@ -92,15 +92,15 @@ export default function Projects() {
 
                             {/* Due colonne */}
                             <motion.div
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={controls}
-                                transition={{ duration: 0.5, delay: 0.5, }}
+                                initial={{ opacity: 0, x: 200 }} // L'intero blocco parte più in basso
+                                animate={{ opacity: 1, x: 0 }} // Sale verso l'alto
+                                transition={{ duration: 1.4, ease: "easeOut" }}
                                 className="flex flex-col md:flex-row flex-wrap items-center lg:pt-10">
                                 {/* Funzioni */}
                                 <motion.div
-                                    initial={{ opacity: 0, y: 50 }}
-                                    animate={controls}
-                                    transition={{ duration: 0.5, delay: 0.5, }}
+                                    initial={{ opacity: 0, x: 200 }} // L'intero blocco parte più in basso
+                                    animate={{ opacity: 1, x: 0 }} // Sale verso l'alto
+                                    transition={{ duration: 1.4, ease: "easeOut" }}
                                     className="w-full lg:w-1/3 py-5 md:py-10">
                                     <h3 className="text-3xl font-semibold mb-8">Features</h3>
                                     <motion.ul
@@ -110,9 +110,9 @@ export default function Projects() {
                                         className="text-xl xl:text-2xl ">
                                         {Array.isArray(project.functions) && project.functions.map((func, i) => (
                                             <motion.li
-                                                initial={{ opacity: 0, y: 50 }}
-                                                animate={controls}
-                                                transition={{ duration: 0.5, delay: 0.5, }}
+                                                initial={{ opacity: 0, x: 200 }} // L'intero blocco parte più in basso
+                                                animate={{ opacity: 1, x: 0 }} // Sale verso l'alto
+                                                transition={{ duration: 1.5, ease: "easeOut" }}
                                                 key={i}
                                                 className='flex pb-4 md:pb-6 items-center'>
                                                 <FontAwesomeIcon icon={faDiamond} className='text-blue-500 pr-5' />
@@ -124,9 +124,9 @@ export default function Projects() {
 
                                 {/* Video */}
                                 <motion.div
-                                    initial={{ opacity: 0, y: 50 }}
-                                    animate={controls}
-                                    transition={{ duration: 0.5, delay: 0.5, }}
+                                    initial={{ opacity: 0, x: 200 }} // L'intero blocco parte più in basso
+                                    animate={{ opacity: 1, x: 0 }} // Sale verso l'alto
+                                    transition={{ duration: 1.4, ease: "easeOut" }}
                                     className="w-full lg:w-2/3 lg:pl-15  md:pt-0 ">
                                     <video
                                         src={project.video}
