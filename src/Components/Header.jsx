@@ -10,7 +10,7 @@ export default function Header() {
     useEffect(() => {
         const updateOffset = () => {
             if (window.innerWidth < 640) { // sm
-                setOffset(-335);
+                setOffset(-315);
             }
         };
 
@@ -36,7 +36,7 @@ export default function Header() {
                         <Link
                             to="about"
                             smooth={true}
-                            duration={2500}
+                            duration={2000}
                             offset={-125}
                             className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]"
                         >
@@ -51,7 +51,7 @@ export default function Header() {
                         <Link
                             to="about"
                             smooth={true}
-                            duration={2500}
+                            duration={2000}
                             offset={-125}
                             className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
                         >
@@ -62,7 +62,7 @@ export default function Header() {
                         <Link
                             to="projects"
                             smooth={true}
-                            duration={2500}
+                            duration={2000}
                             offset={-50}
 
                             className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
@@ -74,7 +74,8 @@ export default function Header() {
                         <Link
                             to="skills"
                             smooth={true}
-                            duration={2500}
+                            duration={2000}
+                            offset={-120}
                             className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
                         >
                             Skills

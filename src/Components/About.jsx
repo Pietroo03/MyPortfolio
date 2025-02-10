@@ -7,7 +7,7 @@ import UseScrollAnimation from '../Animation/ScrollAnimation';
 
 export default function About() {
 
-    const { controls, isVisible } = UseScrollAnimation('about')
+    const { controls } = UseScrollAnimation('about')
     const [offset, setOffset] = useState(100);
 
     useEffect(() => {
@@ -16,7 +16,9 @@ export default function About() {
                 setOffset(-85);
             } else if (window.innerWidth <= 1024) { // md
                 setOffset(-50);
-            };
+            } else if (window.innerWidth >= 1280) {
+                setOffset(-80)
+            }
         }
 
         updateOffset();
@@ -27,13 +29,13 @@ export default function About() {
 
     return (
         <>
-            <section id="about" className="md:py-40 lg:pt-30 px-2 md:px-8 lg:px-10 bg-gray-900">
+            <section id="about" className="py-10 md:py-40 lg:pt-30 px-2 md:px-8 lg:px-10 bg-gray-900">
                 <div className="container mx-auto">
                     <div className="row flex flex-col md:flex-row items-center justify-between">
                         {/* Contenuto (Saluto + Paragrafo insieme da md in poi) */}
                         <motion.div
-                            initial={{ opacity: 0, x: 200 }} // L'intero blocco parte più in basso
-                            animate={{ opacity: 1, x: 0 }} // Sale verso l'alto
+                            initial={{ opacity: 0, y: -200 }} // L'intero blocco parte più in basso
+                            animate={controls} // Sale verso l'alto
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="w-full md:w-2/3 order-2 md:order-1 flex flex-col"
                         >
@@ -54,26 +56,26 @@ export default function About() {
 
                         {/* Immagine (prima su mobile, a destra da md in poi) */}
                         <motion.div
-                            initial={{ opacity: 0, x: 200 }} // L'intero blocco parte più in basso
-                            animate={{ opacity: 1, x: 0 }} // Sale verso l'alto
+                            initial={{ opacity: 0, y: -200 }} // L'intero blocco parte più in basso
+                            animate={controls} // Sale verso l'alto
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="w-full md:w-1/3 order-1 md:order-2 flex justify-center">
                             <img src="public/avatar3.png" alt="" className="w-3/4 md:w-full" />
                         </motion.div>
                     </div>
                     <motion.div
-                        initial={{ opacity: 0, x: 200 }} // L'intero blocco parte più in basso
-                        animate={{ opacity: 1, x: 0 }} // Sale verso l'alto
-                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        initial={{ opacity: 0, y: -200 }} // L'intero blocco parte più in basso
+                        animate={controls} // Sale verso l'alto
+                        transition={{ duration: 1.3, ease: "easeOut" }}
                         className='text-2xl sm:text-3xl md:text-4xl pb-8 pt-20 md:pb-15'>
 
                         <FontAwesomeIcon icon={faMagnifyingGlass} rotation={90} className='text-cyan-500' />
                         <span className='pl-4'>What will you find here?</span>
                     </motion.div>
                     <motion.ul
-                        initial={{ opacity: 0, x: 200 }} // L'intero blocco parte più in basso
-                        animate={{ opacity: 1, x: 0 }} // Sale verso l'alto
-                        transition={{ duration: 1, ease: "easeOut" }}
+                        initial={{ opacity: 0, y: -200 }} // L'intero blocco parte più in basso
+                        animate={controls} // Sale verso l'alto
+                        transition={{ duration: 1.5, ease: "easeOut" }}
                         className='text-xl md:text-3xl'>
                         <li className='pb-10 md:pb-13 flex items-center'>
                             <div>
@@ -92,7 +94,7 @@ export default function About() {
                             </div>
                             <div className='pl-4'>
                                 <span className='font-bold text-indigo-400 inline-block group transition-transform duration-200 ease-in-out hover:scale-105'>
-                                    <Link to='skills' smooth={true} duration={2500} className="cursor-pointer bg-left-bottom bg-gradient-to-r from-indigo-400 to-indigo-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">My Skills:</Link>
+                                    <Link to='skills' smooth={true} offset={-50} duration={2500} className="cursor-pointer bg-left-bottom bg-gradient-to-r from-indigo-400 to-indigo-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">My Skills:</Link>
                                 </span>
                                 <span className='pl-4'>an overview of the technologies and tools I learnt and I use to develop modern and efficient web applications.</span>
                             </div>
