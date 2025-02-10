@@ -11,8 +11,6 @@ function App() {
 
       <Header />
 
-
-
       <main className="text-white bg-gray-800 ">
 
         <About />
@@ -21,12 +19,7 @@ function App() {
 
       </main>
 
-
-
       <Footer />
-
-
-
 
     </>
   )

@@ -16,7 +16,7 @@ export default function About() {
                 setOffset(-85);
             } else if (window.innerWidth <= 1024) { // md
                 setOffset(-50);
-            } else if (window.innerWidth >= 1280) {
+            } else if (window.innerWidth >= 1280) { // lg
                 setOffset(-80)
             }
         }
@@ -32,19 +32,20 @@ export default function About() {
             <section id="about" className="py-10 md:py-40 lg:pt-30 px-2 md:px-8 lg:px-10 bg-gray-900">
                 <div className="container mx-auto">
                     <div className="row flex flex-col md:flex-row items-center justify-between">
-                        {/* Contenuto (Saluto + Paragrafo insieme da md in poi) */}
+
+                        {/* Greeting and intro flexed from md size */}
                         <motion.div
-                            initial={{ opacity: 0, y: -200 }} // L'intero blocco parte più in basso
-                            animate={controls} // Sale verso l'alto
+                            initial={{ opacity: 0, y: -200 }}
+                            animate={controls}
                             transition={{ duration: 1, ease: "easeOut" }}
-                            className="w-full md:w-2/3 order-2 md:order-1 flex flex-col"
-                        >
-                            {/* Saluto */}
+                            className="w-full md:w-2/3 order-2 md:order-1 flex flex-col">
+
+                            {/* Greeting */}
                             <h1 className="text-3xl pb-5 md:text-4xl lg:text-5xl flex items-center justify-start">
                                 <div>Hi, I'm Pietro</div>
                             </h1>
 
-                            {/* Paragrafo */}
+                            {/* Introduction */}
                             <div className="text-xl md:text-2xl lg:text-3xl md:py-10">
                                 <p>
                                     I'm a Jr. Full-Stack Web Developer, I specialize in building dynamic and user-friendly web applications,
@@ -54,27 +55,29 @@ export default function About() {
                             </div>
                         </motion.div>
 
-                        {/* Immagine (prima su mobile, a destra da md in poi) */}
+                        {/* Image (Flexed right from md size) */}
                         <motion.div
-                            initial={{ opacity: 0, y: -200 }} // L'intero blocco parte più in basso
-                            animate={controls} // Sale verso l'alto
+                            initial={{ opacity: 0, y: -200 }}
+                            animate={controls}
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="w-full md:w-1/3 order-1 md:order-2 flex justify-center">
                             <img src="public/avatar3.png" alt="" className="w-3/4 md:w-full" />
                         </motion.div>
                     </div>
+
+                    {/* Points List */}
                     <motion.div
-                        initial={{ opacity: 0, y: -200 }} // L'intero blocco parte più in basso
-                        animate={controls} // Sale verso l'alto
+                        initial={{ opacity: 0, y: -200 }}
+                        animate={controls}
                         transition={{ duration: 1.3, ease: "easeOut" }}
                         className='text-2xl sm:text-3xl md:text-4xl pb-8 pt-20 md:pb-15'>
-
                         <FontAwesomeIcon icon={faMagnifyingGlass} rotation={90} className='text-cyan-500' />
                         <span className='pl-4'>What will you find here?</span>
                     </motion.div>
+
                     <motion.ul
-                        initial={{ opacity: 0, y: -200 }} // L'intero blocco parte più in basso
-                        animate={controls} // Sale verso l'alto
+                        initial={{ opacity: 0, y: -200 }}
+                        animate={controls}
                         transition={{ duration: 1.5, ease: "easeOut" }}
                         className='text-xl md:text-3xl'>
                         <li className='pb-10 md:pb-13 flex items-center'>
@@ -111,15 +114,16 @@ export default function About() {
                             </div>
                         </li>
                     </motion.ul>
+
                 </div>
             </section >
+
             <div className='text-gray-900 rotate-180 w-full'>
                 <svg className="w-full h-[55px] md:h-[110px] lg:h-[150px] 3xl:h-[400px]"
                     viewBox="0 0 1440 100"
                     preserveAspectRatio="xMidYMid slice"
                     xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                >
+                    version="1.1">
                     <path className="wavePath-haxJK1 animationPaused-2hZ4IO "
                         d="M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z"
                         fill="currentColor" />

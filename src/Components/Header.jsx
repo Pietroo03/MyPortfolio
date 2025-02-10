@@ -5,7 +5,7 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [offset, setOffset] = useState(-125); // Valore di default
+    const [offset, setOffset] = useState(-125);
 
     useEffect(() => {
         const updateOffset = () => {
@@ -14,8 +14,8 @@ export default function Header() {
             }
         };
 
-        updateOffset(); // Imposta il valore iniziale
-        window.addEventListener('resize', updateOffset); // Aggiorna al resize
+        updateOffset();
+        window.addEventListener('resize', updateOffset);
 
         return () => window.removeEventListener('resize', updateOffset);
     }, []);
@@ -30,70 +30,73 @@ export default function Header() {
                         src="public/profile-photo.jpg"
                         alt=""
                         style={{ borderRadius: "50%" }}
-                        className="w-[70px]"
-                    />
+                        className="w-[70px]" />
+
+                    {/* Name link to about section */}
                     <span className="pl-5 group hover:text-blue-400 transition duration-200 ease-in-out hover:scale-110 transition duration-500 ease-in-out">
                         <Link
                             to="about"
                             smooth={true}
                             duration={2000}
                             offset={-125}
-                            className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]"
-                        >
+                            className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
                             Pietro Ponte
                         </Link>
                     </span>
                 </div>
 
-                {/* Menu Desktop */}
+                {/* Desktop Menu  */}
                 <nav className="hidden md:flex items-center">
+
+                    {/* About link */}
                     <div className="group hover:text-blue-400 transition duration-200 ease-in-out hover:scale-110 transition duration-500 ease-in-out">
                         <Link
                             to="about"
                             smooth={true}
                             duration={2000}
                             offset={-125}
-                            className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-                        >
+                            className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                             About
                         </Link>
                     </div>
+
+                    {/* Projects link */}
                     <div className="ml-6 group hover:text-blue-400 transition duration-200 ease-in-out hover:scale-110 transition duration-500 ease-in-out">
                         <Link
                             to="projects"
                             smooth={true}
                             duration={2000}
                             offset={-50}
-
-                            className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-                        >
+                            className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                             Projects
                         </Link>
                     </div>
+
+                    {/* Skills link */}
                     <div className="ml-6 group hover:text-blue-400 transition duration-200 ease-in-out hover:scale-110 transition duration-500 ease-in-out">
                         <Link
                             to="skills"
                             smooth={true}
                             duration={2000}
                             offset={-120}
-                            className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-                        >
+                            className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                             Skills
                         </Link>
                     </div>
+
+                    {/* Contacts link */}
                     <div className="mx-6 group hover:text-blue-400 transition duration-200 ease-in-out hover:scale-110 transition duration-500 ease-in-out">
                         <Link
                             to="contacts"
                             smooth={true}
                             duration={2500}
-                            className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-                        >
+                            className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                             Contacts
                         </Link>
                     </div>
                 </nav>
 
-                {/* Icona del menu per mobile */}
+                {/* Mobile icon menu */}
                 <div className="md:hidden flex items-center ">
                     <button onClick={toggleMenu} className="text-3xl cursor-pointer">
                         {menuOpen ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}
@@ -101,8 +104,10 @@ export default function Header() {
                 </div>
             </header>
 
-            {/* Menu mobile */}
+            {/* Mobile menu  */}
             <div className={`${menuOpen ? "sticky top-[83px] bg-slate-600/90 text-white py-5 px-4 z-50" : "hidden"}`}>
+
+                {/* About link */}
                 <div className="text-xl py-3">
                     <Link
                         to="about"
@@ -114,6 +119,8 @@ export default function Header() {
                         About
                     </Link>
                 </div>
+
+                {/* Projects link */}
                 <div className="text-xl py-3">
                     <Link
                         to="projects"
@@ -125,6 +132,8 @@ export default function Header() {
                         Projects
                     </Link>
                 </div>
+
+                {/* Sills link */}
                 <div className="text-xl py-3">
                     <Link
                         to="skills"
@@ -136,6 +145,8 @@ export default function Header() {
                         Skills
                     </Link>
                 </div>
+
+                {/* Contacts link */}
                 <div className="text-xl py-3">
                     <Link
                         to="contacts"
